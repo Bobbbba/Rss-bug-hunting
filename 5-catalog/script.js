@@ -40,6 +40,7 @@ function getFiltered() {
 }
 
 function render() {
+  grid.innerHTML = '';
   const items = getFiltered();
   items.forEach((p) => {
     const card = document.createElement("div");
@@ -56,4 +57,6 @@ sortSelect.addEventListener("change", render);
 
 resetBtn.addEventListener("click", () => {
   searchInput.value = "";
+ 
 });
+render()
