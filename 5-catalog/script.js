@@ -17,17 +17,18 @@ const grid = document.getElementById("grid");
 const countEl = document.getElementById("count");
 
 function getFiltered() {
-  let result = products;
-  const search = searchInput.value;
+  let result = products.slice();
+  const search = searchInput.value.trim().toLowerCase();
   const category = categorySelect.value;
   const sort = sortSelect.value;
 
   if (search) {
-    result = result.filter((p) => p.name === search);
+   
+    result = result.filter((p) => p.name.toLowerCase().includes(search) );
   }
 
   if (category !== "all") {
-    result = products.filter((p) => p.category !== category);
+    result = products.filter((p) => p.category === category);
   }
 
   if (sort === "asc") {
