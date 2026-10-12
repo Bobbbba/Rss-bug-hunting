@@ -37,7 +37,7 @@ function addToCart(id) {
   }
   const existing = cart.find((i) => i.id === id);
   if (existing) {
-    existing.qty += 1;
+    existing.gty += 1;
   }
   else {
     cart.push({ id: product.id, name: product.name, price: product.price, qty: 1 });
