@@ -19,6 +19,8 @@ const countEl = document.getElementById("count");
 function getFiltered() {
   let result = products.slice();
   const search = searchInput.value.trim().toLowerCase();
+  let result = products.slice();
+  const search = searchInput.value.trim().toLowerCase();
   const category = categorySelect.value;
   const sort = sortSelect.value;
 
@@ -63,3 +65,4 @@ resetBtn.addEventListener("click", () => {
   sortSelect.selectedIndex = 0;
   render();
 });
+render()
